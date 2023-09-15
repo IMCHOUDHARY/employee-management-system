@@ -36,6 +36,7 @@ export class RegisterComponent {
   });
   proceedregister() {
     if (this.registerform.valid) {
+      console.log(this.registerform.value.securityquestion);
       this.service.RegisterUser(this.registerform.value).subscribe(result => {
         this.toastr.success('Please contact admin for enable access.','Registered successfully')
         this.router.navigate(['login'])

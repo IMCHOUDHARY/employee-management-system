@@ -20,6 +20,7 @@ export class ForgotPasswordComponent {
 
   forgotpasswordform = this.builder.group({
     id: this.builder.control('', Validators.required),
+    securityquestion: this.builder.control({value: '', disabled: true}),
     securityanswer: this.builder.control('', Validators.required),
     password: this.builder.control('', Validators.required)
   });

@@ -1,0 +1,182 @@
+{
+  "user": [
+    {
+      "id": "admin",
+      "name": "NT Infotech",
+      "password": "Test$1234",
+      "email": "test@gmail.com",
+      "gender": "male",
+      "securityquestion": "In what city were you born?",
+      "securityanswer": "Ghaziabad",
+      "role": "admin",
+      "isactive": true,
+      "address": {
+        "area": "chennai"
+      }
+    },
+    {
+      "id": "testuser",
+      "name": "Test User",
+      "password": "Test@4321",
+      "email": "test@in.com",
+      "gender": "male",
+      "securityquestion": "In what city were you born?",
+      "securityanswer": "Ghaziabad",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "Jhon1",
+      "name": "NT Infotech",
+      "password": "Test@1233",
+      "email": "te@in.com",
+      "gender": "male",
+      "securityquestion": "In what city were you born?",
+      "securityanswer": "Ghaziabad",
+      "role": "tech",
+      "isactive": true,
+      "address": {
+        "area": "chennai"
+      }
+    },
+    {
+      "id": "ntuser",
+      "name": "ramesh",
+      "password": "Test@1234",
+      "email": "te@in.com",
+      "gender": "male",
+      "securityquestion": "In what city were you born?",
+      "securityanswer": "Ghaziabad",
+      "role": "tech",
+      "isactive": true,
+      "address": {
+        "area": "banglore"
+      }
+    },
+    {
+      "id": "ankit.choudhary",
+      "name": "Ankit Choudhary",
+      "password": "Test$1234",
+      "email": "ankit.choudhary@impetus.com",
+      "gender": "male",
+      "securityquestion": "In what city were you born?",
+      "securityanswer": "Ghaziabad",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "ankita.singh",
+      "name": "Ankita Singh",
+      "password": "Test@4321",
+      "email": "ankita.singh@gathr.one",
+      "gender": "female",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "karan.dave",
+      "name": "Karan",
+      "password": "Test@1234",
+      "email": "karan.dave@impetus.com",
+      "gender": "male",
+      "securityquestion": "In what city were you born?",
+      "securityanswer": "Gandhinagar",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "ankit.singh",
+      "name": "Ankit Singh",
+      "password": "Test@1234",
+      "email": "ankit.singh@Gmail.com",
+      "gender": "male",
+      "securityquestion": "In what city were you born?",
+      "securityanswer": "Delhi",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "Anku88",
+      "name": "Ankita",
+      "password": "Ankita.$ingh987",
+      "email": "ankita@xyz.com",
+      "gender": "female",
+      "securityquestion": "In what city were you born?",
+      "securityanswer": "delhi",
+      "role": "",
+      "isactive": false
+    }
+  ],
+  "role": [
+    {
+      "code": "user",
+      "name": "User"
+    },
+    {
+      "code": "tech",
+      "name": "Technician"
+    }
+  ],
+  "menu": [
+    {
+      "code": "user",
+      "name": "User"
+    },
+    {
+      "code": "employee",
+      "name": "Employee"
+    }
+  ],
+  "roleaccess": [
+    {
+      "role": "admin",
+      "menu": "user",
+      "haveedit": true,
+      "haveadd": true,
+      "havedelete": true
+    },
+    {
+      "role": "admin",
+      "menu": "employee",
+      "haveedit": true,
+      "haveadd": true,
+      "havedelete": true
+    },
+    {
+      "role": "user",
+      "menu": "user",
+      "haveedit": false,
+      "haveadd": false,
+      "havedelete": false
+    },
+    {
+      "role": "user",
+      "menu": "employee",
+      "haveedit": true,
+      "haveadd": true,
+      "havedelete": false
+    }
+  ],
+  "employees": [
+    {
+      "firstName": "Ankit",
+      "lastName": "Choudhary",
+      "email": "abc@gmail.com",
+      "dob": "2023-08-22T18:30:00.000Z",
+      "gender": "male",
+      "department": "Admin",
+      "experience": 3,
+      "id": 2
+    },
+    {
+      "firstName": "Brinn",
+      "lastName": "Jephcote",
+      "email": "bje@arc.org",
+      "dob": "1981-10-05T12:09:39Z",
+      "gender": "Female",
+      "department": "IT",
+      "experience": 6,
+      "id": 1
+    }
+  ]
+}
