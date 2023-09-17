@@ -10,22 +10,27 @@ export class AuthService {
   constructor(private http:HttpClient) {
 
   }
-  apiurl='http://localhost:3000/user';
+  //apiurl='http://localhost:3000/user';
+  userUrl = 'https://json-server-rtb.onrender.com/' + 'user';
+  roleUrl = 'https://json-server-rtb.onrender.com/' + 'role';
+  menuUrl = 'https://json-server-rtb.onrender.com/' + 'menu';
+  roleaccessUrl = 'https://json-server-rtb.onrender.com/' + 'roleaccess';
+  employeesUrl = 'https://json-server-rtb.onrender.com/' + 'employees';
 
   RegisterUser(inputdata:any){
-    return this.http.post(this.apiurl,inputdata)
+    return this.http.post(this.userUrl,inputdata)
   }
   GetUserbyCode(id:any){
-    return this.http.get(this.apiurl+'/'+id);
+    return this.http.get(this.userUrl+'/'+id);
   }
   Getall(){
-    return this.http.get(this.apiurl);
+    return this.http.get(this.userUrl);
   }
   updateuser(id:any,inputdata:any){
-    return this.http.put(this.apiurl+'/'+id,inputdata);
+    return this.http.put(this.userUrl+'/'+id,inputdata);
   }
   getuserrole(){
-    return this.http.get('http://localhost:3000/role');
+    return this.http.get(this.roleUrl);
   }
   isloggedin(){
     return sessionStorage.getItem('username')!=null;
@@ -34,20 +39,20 @@ export class AuthService {
     return sessionStorage.getItem('role')!=null?sessionStorage.getItem('role')?.toString():'';
   }
   GetAllEmployee(){
-    return this.http.get('http://localhost:3000/employees');
+    return this.http.get(this.employeesUrl);
   }
   deleteEmployee(id: number): Observable<any> {
-    return this.http.delete(`http://localhost:3000/employees/${id}`);
+    return this.http.delete(this.employeesUrl + id);
   }
 
   addEmployee(inputdata:any){
-    return this.http.post('http://localhost:3000/employees',inputdata)
+    return this.http.post(this.employeesUrl,inputdata)
   }
 
   updateEmployee(id:any,inputdata:any){
-    return this.http.put('http://localhost:3000/employees/'+id,inputdata);
+    return this.http.put(this.employeesUrl +id,inputdata);
   }
   Getaccessbyrole(role:any,menu:any){
-    return this.http.get('http://localhost:3000/roleaccess?role='+role+'&menu='+menu)
+    return this.http.get(this.employeesUrl+ '?role=' +role+'&menu='+menu)
   }
 }

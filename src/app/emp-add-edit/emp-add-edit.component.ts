@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import {AuthService} from "../service/auth.service";
 import { ToastrService } from 'ngx-toastr';
@@ -20,13 +20,13 @@ export class EmpAddEditComponent implements OnInit{
     private toastr: ToastrService
   ) {
     this.empForm = this.fb.group({
-      firstName: '',
-      lastName: '',
-      email: '',
-      dob: '',
-      gender: '',
-      department: '',
-      experience: '',
+      firstName: this.fb.control('', Validators.required),
+      lastName: this.fb.control('', Validators.required),
+      email: this.fb.control('', Validators.required),
+      dob: this.fb.control('', Validators.required),
+      gender: this.fb.control('', Validators.required),
+      department: this.fb.control('', Validators.required),
+      experience: this.fb.control('', Validators.required),
     });
   }
 
